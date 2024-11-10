@@ -8,7 +8,7 @@ from airflow.providers.airbyte.operators.airbyte import AirbyteTriggerSyncOperat
 from airflow.providers.docker.operators.docker import DockerOperator
 import subprocess
 
-CONN_ID = ''
+# CONN_ID = ''
 
 
 default_args = {
@@ -19,13 +19,13 @@ default_args = {
     'email_on_retry': False,
 }
 
-# def run_elt_script():
-#     script_path = "/opt/airflow/elt_script/elt_script.py"
-#     result = subprocess.run(["python", script_path], capture_output=True, text=True)
-#     if result.returncode != 0:
-#         raise Exception(f"Script failed with error: {result.stderr}")
-#     else:
-#         print(result.stdout)
+def run_elt_script():
+    script_path = "/opt/airflow/elt_script/elt_script.py"
+    result = subprocess.run(["python", script_path], capture_output=True, text=True)
+    if result.returncode != 0:
+        raise Exception(f"Script failed with error: {result.stderr}")
+    else:
+        print(result.stdout)
 
 dag = DAG(
     'elt_and_dbt',
@@ -36,21 +36,21 @@ dag = DAG(
 )
 
 
-t1 = AirbyteTriggerSyncOperator(
-    task_id='trigger_airbyte_sync',
-    connection_id=CONN_ID,
-    asynchronous=False,
-    timeout=3600,
-    wait_seconds=3,
-    dag=dag
-)
-
-
-# t1 = PythonOperator(
-#     task_id='run_elt_script',
-#     python_callable=run_elt_script,
+# t1 = AirbyteTriggerSyncOperator(
+#     task_id='trigger_airbyte_sync',
+#     connection_id=CONN_ID,
+#     asynchronous=False,
+#     timeout=3600,
+#     wait_seconds=3,
 #     dag=dag
 # )
+
+
+t1 = PythonOperator(
+    task_id='run_elt_script',
+    python_callable=run_elt_script,
+    dag=dag
+)
 
 t2 = DockerOperator(
     task_id='run_dbt',
