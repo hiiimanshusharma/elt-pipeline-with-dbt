@@ -1,0 +1,59 @@
+[0m16:41:12.940303 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x742ca1de7bb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x742ca06ce140>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x742ca06cff40>]}
+
+
+============================== 16:41:12.949017 | 00d32898-02d6-498a-b0be-ae4e3406a289 ==============================
+[0m16:41:12.949017 [info ] [MainThread]: Running with dbt=1.8.8
+[0m16:41:12.950142 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': '/home/himanshu/.dbt', 'log_path': 'logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt init', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m16:41:12.958685 [warn ] [MainThread]: [ConfigFolderDirectory]: Unable to parse dict {'dir': PosixPath('/home/himanshu/.dbt')}
+[0m16:41:12.959206 [info ] [MainThread]: Creating dbt configuration folder at 
+[0m16:41:30.315168 [debug] [MainThread]: Starter project path: /home/himanshu/data-pipeline/.env/lib/python3.10/site-packages/dbt/include/starter_project
+[0m16:41:30.317811 [info ] [MainThread]: 
+Your new dbt project "custom_postgres" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m16:41:30.318276 [info ] [MainThread]: Setting up your profile.
+[0m16:45:34.534656 [info ] [MainThread]: Profile custom_postgres written to /home/himanshu/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m16:45:34.544556 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 261.66467, "process_user_time": 1.176794, "process_kernel_time": 0.077028, "process_mem_max_rss": "90160", "process_in_blocks": "88", "process_out_blocks": "88"}
+[0m16:45:34.549901 [debug] [MainThread]: Command `dbt init` succeeded at 16:45:34.549062 after 261.67 seconds
+[0m16:45:34.553507 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x742ca1de7bb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x742ca038ca00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x742ca074efe0>]}
+[0m16:45:34.556093 [debug] [MainThread]: Flushing usage events
+[0m19:31:37.543170 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75c3464b7be0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75c346896080>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75c346897370>]}
+
+
+============================== 19:31:37.548104 | 1b74cb58-8d94-419e-bd62-7a6af61d9d5c ==============================
+[0m19:31:37.548104 [info ] [MainThread]: Running with dbt=1.8.8
+[0m19:31:37.549288 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': '/home/himanshu/.dbt', 'log_path': 'logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'invocation_command': 'dbt debug --config-dir', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m19:31:37.566929 [info ] [MainThread]: To view your profiles.yml file, run:
+
+xdg-open /home/himanshu/.dbt
+[0m19:31:37.569165 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 0.1007444, "process_user_time": 1.650471, "process_kernel_time": 0.146932, "process_mem_max_rss": "85252", "process_in_blocks": "46904", "process_out_blocks": "24"}
+[0m19:31:37.570146 [debug] [MainThread]: Command `dbt debug` succeeded at 19:31:37.570012 after 0.10 seconds
+[0m19:31:37.571754 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75c3464b7be0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75c3468d0d00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75c3468d3d00>]}
+[0m19:31:37.573108 [debug] [MainThread]: Flushing usage events
+[0m07:36:31.817672 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a85523a7b50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a85527cf850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a85527cf8b0>]}
+
+
+============================== 07:36:31.820593 | 5d6da46b-138f-4102-a874-df22a7dc97e8 ==============================
+[0m07:36:31.820593 [info ] [MainThread]: Running with dbt=1.8.8
+[0m07:36:31.821286 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/himanshu/.dbt', 'debug': 'False', 'version_check': 'True', 'log_path': 'logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt source freshness', 'send_anonymous_usage_stats': 'True'}
+[0m07:36:31.821764 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /home/himanshu/data-pipeline/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m07:36:31.822735 [debug] [MainThread]: Resource report: {"command_name": "freshness", "command_wall_clock_time": 0.051767845, "process_user_time": 1.118146, "process_kernel_time": 0.093263, "process_mem_max_rss": "84968", "process_in_blocks": "43312", "process_out_blocks": "8", "command_success": false}
+[0m07:36:31.823485 [debug] [MainThread]: Command `dbt source freshness` failed at 07:36:31.823392 after 0.05 seconds
+[0m07:36:31.823838 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a85523a7b50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a8550cb93f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a8550cb8d30>]}
+[0m07:36:31.824241 [debug] [MainThread]: Flushing usage events
